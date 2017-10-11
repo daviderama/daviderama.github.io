@@ -60,14 +60,21 @@ var terminal = {
 
       document.body.appendChild(help);
     }
-
-    if (command == 'about') {
+    else if (command == 'about') {
       var aboutContent = document.createTextNode("Davide is a Software Engineer currently working at .... " );
       var about = document.createElement('div');
       about.setAttribute('id', 'about');
       about.appendChild(aboutContent);
 
       document.body.appendChild(about);
+    }
+    else {
+      var noCommandContent = document.createTextNode("command doesn't exist. Try to type `help`." );
+      var noCommand = document.createElement('div');
+      noCommand.setAttribute('id', 'no-command');
+      noCommand.appendChild(noCommandContent);
+
+      document.body.appendChild(noCommand);
     }
 
     this.setPrompt();
