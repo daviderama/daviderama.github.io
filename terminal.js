@@ -34,10 +34,11 @@ var terminal = {
 
     this.commandLine = document.createElement('input');
     this.commandLine.type = "text";
-    // commandLine.setAttribute('id', 'command');
     commandPrompt.appendChild(this.commandLine);
 
     document.body.appendChild(commandPrompt);
+
+    this.commandLine.focus();
   },
 
   getCommand: function(e) {
