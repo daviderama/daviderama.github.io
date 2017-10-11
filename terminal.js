@@ -12,7 +12,7 @@ var terminal = {
   setInfoLogin: function() {
     var infoLogin = document.createElement('div');
     infoLogin.setAttribute('id', 'infoLogin');
-    var infoContent = document.createTextNode("Last login: ");
+    var infoContent = document.createTextNode(text.infoLogin);
     infoLogin.appendChild(infoContent);
 
     var time = document.createElement('span');
@@ -28,7 +28,7 @@ var terminal = {
     commandPrompt.setAttribute('id', 'commandPrompt');
 
     var prompt = document.createElement('span');
-    var promptContent = document.createTextNode("user@~daviderama.github.io$");
+    var promptContent = document.createTextNode(text.infoCommand);
     prompt.appendChild(promptContent);
     commandPrompt.appendChild(prompt);
 
@@ -53,7 +53,7 @@ var terminal = {
     this.disableCommandLine();
 
     if (command == 'help') {
-      var helpContent = document.createTextNode("Welcome! This is Davide Ramaglietta's personal website. Type `about` if you want to have some general information about him.");
+      var helpContent = document.createTextNode(text.help);
       var help = document.createElement('div');
       help.setAttribute('id', 'help');
       help.appendChild(helpContent);
@@ -61,7 +61,7 @@ var terminal = {
       document.body.appendChild(help);
     }
     else if (command == 'about') {
-      var aboutContent = document.createTextNode("Davide is a Software Engineer currently working at .... " );
+      var aboutContent = document.createTextNode(text.about);
       var about = document.createElement('div');
       about.setAttribute('id', 'about');
       about.appendChild(aboutContent);
@@ -69,7 +69,7 @@ var terminal = {
       document.body.appendChild(about);
     }
     else {
-      var noCommandContent = document.createTextNode("command doesn't exist. Try to type `help`." );
+      var noCommandContent = document.createTextNode(text.noCommandFound);
       var noCommand = document.createElement('div');
       noCommand.setAttribute('id', 'no-command');
       noCommand.appendChild(noCommandContent);
