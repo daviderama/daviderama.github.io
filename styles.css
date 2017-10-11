@@ -1,32 +1,19 @@
 body {
   font-family: Monaco, Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: white;
   background-color: black;
 }
 
 input {
   font-family: Monaco, Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   background-color: black;
   color: white;
   border: none;
+  padding-left: 18px;
 }
 
 input:focus {
   outline-width: 0;
-  -webkit-animation: blink 1s step-end infinite;
-  animation: blink 1s step-end infinite;
-}
-
-@-webkit-keyframes blink {
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
-}
-
-@keyframes blink {
-  0% { opacity: 1.0; }
-  50% { opacity: 0.0; }
-  100% { opacity: 1.0; }
 }
